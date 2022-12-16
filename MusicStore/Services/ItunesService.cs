@@ -6,14 +6,21 @@ using MusicStore.Models;
 
 namespace MusicStore.Services;
 
-public class ItunesSearchService
+public class ItunesService
 {
     private readonly iTunesSearchManager _iTunesSearchManager;
+    
 
-    public ItunesSearchService()
+    public ItunesService()
     {
         _iTunesSearchManager = new iTunesSearchManager();
     }
+    
+
+    
+    
+    
+    
     
     public async Task<IEnumerable<Album>?> SearchAsync(string searchTerm)
     {

@@ -3,10 +3,11 @@
              xmlns:local="using:MusicStore"
              x:Class="MusicStore.App">
     <Application.DataTemplates>
-        <local:ViewLocator/>
+        <local:ViewLocator />
     </Application.DataTemplates>
 
     <Application.Styles>
-        <FluentTheme Mode="Light"/>
+        <FluentTheme Mode="Dark" />
+        <StyleInclude Source="avares://MusicStore/Icon.axaml"></StyleInclude>
     </Application.Styles>
 </Application>

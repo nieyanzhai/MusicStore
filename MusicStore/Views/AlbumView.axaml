@@ -4,5 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="MusicStore.Views.AlbumView">
-    Welcome to Avalonia!
+    <StackPanel Spacing="5" Width="200">
+        <Border CornerRadius="10" ClipToBounds="True">
+            <Panel Background="#7fFF22dd">
+                <Image Width="200" Source="{Binding Cover}"></Image>
+                <Panel Height="200" IsVisible="{Binding Cover, Converter={x:Static ObjectConverters.IsNull}}">
+                    <PathIcon Height="75" Width="75" Data="{StaticResource music_regular}"></PathIcon>
+                </Panel>
+            </Panel>
+        </Border>
+        <TextBlock HorizontalAlignment="Center" Text="{Binding Title}"></TextBlock>
+        <TextBlock HorizontalAlignment="Center" Text="{Binding Artist}"></TextBlock>
+    </StackPanel>
 </UserControl>

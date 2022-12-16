@@ -1,19 +1,18 @@
-$HEADER$using Avalonia;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace $NAMESPACE$
-{
-    public partial class $CLASS$ : UserControl
-    {
-        public $CLASS$()
-        {
-            InitializeComponent();
-        }
+namespace MusicStore.Views;
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
+public partial class AlbumView : UserControl
+{
+    public AlbumView()
+    {
+        InitializeComponent();
+    }
+
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
     }
 }
